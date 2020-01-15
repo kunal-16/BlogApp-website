@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BlogApp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="/stylesheets/app.css">
+    </head>
+    <body>
+        
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div class="header item"><i class="code icon"></i> Blog Site</div>
+                <a href="/" class="item">Home</a>
+                <a href="/blogs/new" class="item">New Post</a>
+            </div>
+        </div>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Blog</div>
+    <form class="ui form" action="/blogs" method="POST">
+        <div class='field'>
+            <label>Title</label>
+            <input type="text" placeholder="Title" name="blog[title]">
+        </div>
+        <div class='field'>
+            <label>Image</label>
+            <input type="text" placeholder="Image URL" name="blog[image]">
+        </div>
+        <div class="field">
+            <label>Description</label>
+            <textarea name="blog[body]" placeholder="Your text goes here..." cols="30" rows="10"></textarea>
+        </div>
+        
+        
+        <input class="ui violet basic button" type="submit">
+    </form>
+</div>
+
+</body>
+</html>
